@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+// import Counter from './Counter.js'
 
 function Todo({ todo, index, completeTodo, removeTodo}) {
   return (
@@ -42,16 +43,16 @@ function TodoForm({addTodo}) {
 function App() {
   const  [todos, setTodos ] = useState([
     {
-      text: 'Learn about React',
-      isCOmpleted: false
+      text: 'Learn about React1',
+      isCompleted: true
     },
     {
-      text: 'Learn about React',
-      isCOmpleted: false
+      text: 'Leetcode',
+      isCompleted: false
     },
     {
-      text: 'Learn about React',
-      isCOmpleted: false
+      text: 'Behavior',
+      isCompleted: false
     }
   ]);
   const addTodo = text => {
@@ -73,6 +74,7 @@ function App() {
 
   return (
     <div className='app'>
+      {/* <Counter/> */}
       <div className='todo-list'>
         {todos.map((todo, index) => (
           <Todo
